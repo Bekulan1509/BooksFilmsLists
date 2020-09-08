@@ -22,24 +22,14 @@ import com.twodev.booksfilmslists.models.FilmModel;
 
 import java.util.List;
 
-/**
- * A placeholder fragment containing a simple view.
- */
-public class PlaceholderFragment extends Fragment implements OnItemClickListener, GhibliService.GhibliCallBack {
 
-    private static final String ARG_SECTION_NUMBER = "section_number";
+public class FirstFragment extends Fragment implements OnItemClickListener, GhibliService.GhibliCallBack {
+
     private RecyclerView recyclerView;
     private FilmAdapter filmAdapter;
     private List<FilmModel> filmList;
 
 
-    public static PlaceholderFragment newInstance(int index) {
-        PlaceholderFragment fragment = new PlaceholderFragment();
-        Bundle bundle = new Bundle();
-        bundle.putInt(ARG_SECTION_NUMBER, index);
-        fragment.setArguments(bundle);
-        return fragment;
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

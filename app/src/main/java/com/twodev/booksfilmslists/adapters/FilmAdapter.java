@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.twodev.booksfilmslists.R;
 import com.twodev.booksfilmslists.interfaces.OnItemClickListener;
-import com.twodev.booksfilmslists.models.BookModel;
 import com.twodev.booksfilmslists.models.FilmModel;
 
 import java.util.List;

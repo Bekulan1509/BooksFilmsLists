@@ -9,7 +9,9 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.twodev.booksfilmslists.R;
-import com.twodev.booksfilmslists.ui.PlaceholderFragment;
+import com.twodev.booksfilmslists.ui.FirstFragment;
+import com.twodev.booksfilmslists.ui.SecondFragment;
+import com.twodev.booksfilmslists.ui.ThirdFragment;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
@@ -28,9 +30,19 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        // getItem is called to instantiate the fragment for the given page.
-        // Return a PlaceholderFragment (defined as a static inner class below).
-        return PlaceholderFragment.newInstance(position + 1);
+        Fragment fragment = null;
+        switch (position) {
+            case 0:
+                fragment = new FirstFragment();
+                break;
+            case 1:
+                fragment = new SecondFragment();
+                break;
+            case 2:
+                fragment = new ThirdFragment();
+                break;
+        }
+        return fragment;
     }
 
     @Nullable
